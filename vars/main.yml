@@ -1,0 +1,6 @@
+---
+# vars file for maria.sonar
+- hosts: all
+ sudo: yes
+ roles:
+ - { role:"maria.sonar" , version-packer"1.2.1" }

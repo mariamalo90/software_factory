@@ -1,0 +1,11 @@
+---
+# tasks file for maria.sonar
+ - name Download Sonar
+ get_url: >
+ url=https://akamai.bintray.com/26/263942458279e2cf73fd86671511ac8ef0707e41ed51c9737142f8738bc7c060?__gda__=exp=1521744531~hmac=cd92c325d28df32cc0ef25e9d1d9e5f0be2dd3154aa91e32ed11a2fbbec67bfc&response-content-disposition=attachment%3Bfilename%3D%22sonarqube-7.0.zip%22&response-content-type=application%2Fzip&requestInfo=U2FsdGVkX1-ESdD2chpiJvNKYv670GUzwXPV3yX3Ri2ihMrUkp_GWKGsebv_COBH6V0UkigKWfjIkKplrtDPaaJ-rAfj5ePgxZpQRsPgMI9Q0egmTk1ONGBn3D7M7s5fdYyK2iKBn1Mt3eTmXdEDhJHkiwrQApUnVhCT5yzStVg&response-X-Checksum-Sha1=a447a595b40b92e2cce0b258f79a755f225e41cc&response-X-Checksum-Sha2=263942458279e2cf73fd86671511ac8ef0707e41ed51c9737142f8738bc7c060
+ dest=/usr/local/src/sonar_7.0_linux_amd64.zip
+
+ - name: Extract and install Sonar
+ unarchive: src=/usr/local/src/sonar_7.0_linux_amd64.zip
+ dest=/usr/local/bin
+ copy=no
